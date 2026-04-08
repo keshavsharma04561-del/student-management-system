@@ -7,6 +7,7 @@ Student Management System in C with Github Compilation Workflow
 - Keshav Sharma (B25EC1020)
 - Mannu Bujja (B25EC1024)
 - Bavaliya Hiren Vinodbhai (B25ME1012)
+- Usad Priyansh Ashwinbhai(B25CY1019)
 ##  Project Overview
 This project is a **Student Management System** developed using the C programming language.  
 It is a menu-driven program that allows users to manage student records efficiently.
