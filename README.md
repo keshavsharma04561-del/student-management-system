@@ -31,20 +31,20 @@ It is a menu-driven program that allows users to manage student records efficien
 ---
 
 ##  Concepts Used
-- Structures (`struct`)
+- Structures  (struct)
 - Functions
 - Arrays
 - Pointers (if used)
-- Conditional statements (`if-else`)
-- Loops (`for`, `while`)
+- Conditional statements (if-else)
+- Loops( for, while)
   
 
 ---
 
 ##  Project Structure
-- `main.c` → Main program logic  
-- `student.h` → Structure definition (if used)  
-- `functions.c` → Functions implementation (optional)
+- main.c → Main program logic  
+-  student.h → Structure definition (if used)  
+- functions.c → Functions implementation (optional)
 
 
 
