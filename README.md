@@ -5,7 +5,7 @@ Student Management System in C with Github Compilation Workflow
 ##  Team Members
 - Abhishek Agarwal(B25ME1007)
 - Keshav Sharma (B25EC1020)
-- Mannu Bujja 
+- Mannu Bujja (B25EC1024)
 
 ---
 
