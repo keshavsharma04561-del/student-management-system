@@ -6,29 +6,21 @@ Student Management System in C with Github Compilation Workflow
 - Abhishek Agarwal(B25ME1007)
 - Keshav Sharma (B25EC1020)
 - Mannu Bujja (B25EC1024)
-
----
-
+- Bavaliya Hiren Vinodbhai (B25ME1012)
 ##  Project Overview
 This project is a **Student Management System** developed using the C programming language.  
 It is a menu-driven program that allows users to manage student records efficiently.
-
----
 
 ##  Objectives
 - To understand structures in C
 - To implement file/array-based data handling
 - To build a real-world mini project using C
 
----
-
 ##  Features
 -  Add student details  
 - Display all students  
 -  Search student by roll number  
 -  Delete student record  
-
----
 
 ##  Concepts Used
 - Structures  (struct)
@@ -39,12 +31,9 @@ It is a menu-driven program that allows users to manage student records efficien
 - Loops( for, while)
   
 
----
-
 ##  Project Structure
 - main.c → Main program logic  
--  student.h → Structure definition (if used)  
-- functions.c → Functions implementation (optional)
+-  student.h → Structure definition 
 
 
 
