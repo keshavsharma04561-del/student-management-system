@@ -1,8 +1,8 @@
 # student-management-system
 Student Management System in C with Github Compilation Workflow
-# 🎓 Student Management System (C Language)
+#  Student Management System (C Language)
 
-## 👥 Team Members
+##  Team Members
 - Abhishek Agarwal(B25ME1007)
 - Keshav Sharma (B25EC1020)
 -
