@@ -1,1 +1,18 @@
-lokj
+
+
+void displayStudents() {
+    if (count == 0) {
+        printf("No records found!\n");
+        return;
+    }
+
+    printf("\n----- STUDENT LIST -----\n");
+    for (int i = 0; i < count; i++) {
+        printf("\nRoll: %d\n", students[i].roll);
+        printf("Name: %s\n", students[i].name);
+        printf("Marks: %.2f\n", students[i].marks);
+    }
+}
+
+
+       
