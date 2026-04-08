@@ -13,7 +13,7 @@ int count = 0;
 
 void saveToFile() {
     FILE *fp = fopen("students.dat", "wb");
-    if (fp == NULL) return;
+    if (fp == null) return;
     fwrite(&count, sizeof(int), 1, fp);
     fwrite(students, sizeof(struct Student), count, fp);
     fclose(fp);
@@ -21,7 +21,7 @@ void saveToFile() {
 
 void loadFromFile() {
     FILE *fp = fopen("students.dat", "rb");
-    if (fp == NULL) return;
+    if (fp == null) return;
     fread(&count, sizeof(int), 1, fp);
     fread(students, sizeof(struct Student), count, fp);
     fclose(fp);
