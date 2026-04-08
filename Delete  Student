@@ -1,1 +1,27 @@
+void deleteStudent() {
+    FILE *fp = fopen("students.txt", "r");
+    FILE *temp = fopen("temp.txt", "w");
+    struct Student s;
+    int id, found = 0;
+ printf("Enter ID to delete: ");
+    scanf("%d", &id);
+
+    while (fscanf(fp, "%d %s %f", &s.id, s.name, &s.marks) != EOF) {
+        if (s.id == id) {
+            found = 1;
+            printf("Student deleted successfully!\n");
+        } else {
+            fprintf(temp, "%d %s %.2f\n", s.id, s.name, s.marks);
+        }
+    }
+  fclose(fp);
+    fclose(temp);
+
+    remove("students.txt");
+    rename("temp.txt", "students.txt");
+
+    if (!found) {
+        printf("Student not found!\n");
+    }
+}
 
