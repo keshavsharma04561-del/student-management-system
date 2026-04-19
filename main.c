@@ -1,4 +1,3 @@
-
 //mannu
 //Title explation && overview of code 
 #include <stdio.h>
@@ -6,13 +5,13 @@
 #include <stdlib.h>
 
 #define MAX 100
-#define USERNAME "admin"
-#define PASSWORD "1234"
+#define USER_ID "IITJ"
+#define PASS_KEY "iitj"
 
 struct Student {
-    int roll;
+ int roll;
     char name[50];
-    float marks;
+ float marks;
     char grade;
 };
 
@@ -23,28 +22,27 @@ int count = 0;
 char computeGrade(float marks) {
     if (marks >= 90) return 'A';
     else if (marks >= 75) return 'B';
-    else if (marks >= 60) return 'C';
+ else if (marks >= 60) return 'C';
     else if (marks >= 45) return 'D';
-    else return 'F';
+ else return 'F';
 }
 //abishek
 
 /* File handling */
 void saveToFile() {
-    FILE *fp = fopen("students.dat", "wb");
-    if (fp == NULL) return;
+    FILE *fp = fopen("students.dat", "wb");if (fp == NULL) return;
     fwrite(&count, sizeof(int), 1, fp);
-    fwrite(students, sizeof(struct Student), count, fp);
-    fclose(fp);
+ fwrite(students, sizeof(struct Student), count, fp);
+fclose(fp);
 }
 
 void loadFromFile() {
     FILE *fp = fopen("students.dat", "rb");
-    if (fp == NULL) return;
+ if (fp == NULL) return;
     fread(&count, sizeof(int), 1, fp);
-    if (count < 0 || count > MAX) count = 0;
+ if (count < 0 || count > MAX) count = 0;
     fread(students, sizeof(struct Student), count, fp);
-    fclose(fp);
+fclose(fp);
 }
 
 //keshav
@@ -52,21 +50,21 @@ void loadFromFile() {
 /* Safe input helpers */
 int inputInt() {
     char buffer[50];
-    fgets(buffer, sizeof(buffer), stdin);
+fgets(buffer, sizeof(buffer), stdin);
     int x;
-    if (sscanf(buffer, "%d", &x) != 1) return -1;
+ if (sscanf(buffer, "%d", &x) != 1) return -1;
     return x;
 }
 
 float inputFloat() {
     char buffer[50];
-    fgets(buffer, sizeof(buffer), stdin);
+ fgets(buffer, sizeof(buffer), stdin);
     float x;
-    if (sscanf(buffer, "%f", &x) != 1) return -1;
+if (sscanf(buffer, "%f", &x) != 1) return -1;
     return x;
 }
 
-/* Login (unlimited attempts) */
+// Login (unlimited attempts) */
 int login() {
     char username[30], password[30];
 
@@ -76,15 +74,15 @@ int login() {
         printf("\n--- Login ---\n");
 
         printf("Username: ");
-        fgets(username, sizeof(username), stdin);
+     fgets(username, sizeof(username), stdin);
         username[strcspn(username, "\n")] = '\0';
 
-        printf("Password: ");
+     printf("Password: ");
         fgets(password, sizeof(password), stdin);
-        password[strcspn(password, "\n")] = '\0';
+    password[strcspn(password, "\n")] = '\0';
 
-        if (strcmp(username, USERNAME) == 0 &&
-            strcmp(password, PASSWORD) == 0) {
+        if (strcmp(username, USER_ID) == 0 &&
+     strcmp(password, PASS_KEY) == 0) {
             printf("\nLogin successful!\n");
             return 1;
         }
@@ -97,7 +95,7 @@ int login() {
 /* Add Student */
 void addStudent() {
     if (count >= MAX) {
-        printf("Storage full!\n");
+     printf("Storage full\n");
         return;
     }
 
@@ -119,7 +117,7 @@ void addStudent() {
     printf("Enter Marks (0-100): ");
     float marks = inputFloat();
     if (marks < 0 || marks > 100) {
-        printf("Invalid marks!\n");
+        printf("Invalid marks\n");
         return;
     }
 
@@ -216,11 +214,11 @@ void updateStudent() {
 
 /* Sort */
 void sortStudents() {
-    for (int i = 0; i < count - 1; i++) {
+for (int i = 0; i < count - 1; i++) {
         for (int j = i + 1; j < count; j++) {
-            if (students[i].marks < students[j].marks) {
+    if (students[i].marks < students[j].marks) {
                 struct Student temp = students[i];
-                students[i] = students[j];
+          students[i] = students[j];
                 students[j] = temp;
             }
         }
@@ -231,24 +229,24 @@ void sortStudents() {
 
 /* Stats */
 void showStats() {
-    if (count == 0) return;
+if (count == 0) return;
 
     float total = 0, max = students[0].marks, min = students[0].marks;
 
     for (int i = 0; i < count; i++) {
-        total += students[i].marks;
-        if (students[i].marks > max) max = students[i].marks;
+     total += students[i].marks;
+     if (students[i].marks > max) max = students[i].marks;
         if (students[i].marks < min) min = students[i].marks;
     }
 
-    printf("\nAverage: %.2f\n", total / count);
+ printf("\nAverage: %.2f\n", total / count);
     printf("Highest: %.2f\n", max);
-    printf("Lowest : %.2f\n", min);
+ printf("Lowest : %.2f\n", min);
 }
 
 /* Main */
 int main() {
-    loadFromFile();
+loadFromFile();
 
     if (!login()) return 1;
 
@@ -256,27 +254,20 @@ int main() {
 
     while (1) {
         printf("\n1.Add 2.Display 3.Search 4.Delete 5.Update 6.Sort 7.Stats 8.Exit\n");
-        printf("Enter choice: ");
+     printf("Enter choice: ");
 
         choice = inputInt();
 
         switch (choice) {
-            case 1: addStudent(); break;
+         case 1: addStudent(); break;
             case 2: displayStudents(); break;
             case 3: searchByRoll(); break;
-            case 4: deleteStudent(); break;
-            case 5: updateStudent(); break;
+         case 4: deleteStudent(); break;
+          case 5: updateStudent(); break;
             case 6: sortStudents(); break;
-            case 7: showStats(); break;
+          case 7: showStats(); break;
             case 8: return 0;
             default: printf("Invalid choice!\n");
         }
     }
-}                                 | **Person** | **Name** | **Contribution**                                                                                                      |
-| ---------- | -------- | --------------------------------------------------------------------------------------------------------------------- |
-| Person 1   | Mannu    | Designed program structure, defined `struct Student`, macros (`MAX`, login credentials), and handled global variables |
-| Person 2   | Abhishek | Implemented grade calculation (`computeGrade`) and file handling (`saveToFile`, `loadFromFile`)                       |
-| Person 3   | Keshav   | Developed safe input functions (`inputInt`, `inputFloat`) and login system                                            |
-| Person 4   | Priyansh | Built core features: adding students (`addStudent`) and displaying records (`displayStudents`)                        |
-| Person 5   | Hiren    | Implemented record operations: search, delete, and update functionalities                                             |
-| Person 6   | Vaibhav  | Developed sorting, statistics, and main program control (`main` function)                                             |
+}
