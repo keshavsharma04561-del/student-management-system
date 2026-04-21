@@ -6,7 +6,7 @@
 
 #define MAX 100
 #define USER_ID "IITJ"
-#define PASS_KEY "iitj"
+#define PASSKEY "iitj"
 
 struct Student {
  int roll;
